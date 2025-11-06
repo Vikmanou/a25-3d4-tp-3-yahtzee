@@ -1,0 +1,28 @@
+# Dossiers de build
+**/bin/
+**/obj/
+**/Debug/
+**/Release/
+**/x64/
+**/x86/
+**/arm/
+**/arm64/
+**/TestResults/
+**/[Bb]uild/
+**/[Oo]ut/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# NuGet
+packages/
+*.nupkg
+
+# Logs et temporaires
+*.log
+*.tmp
+*.bak
