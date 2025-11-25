@@ -8,44 +8,49 @@ namespace TP_3
 {
 	internal class Partie
 	{
-		const int NOMBRE_DE_ROULES_PAR_TOUR = 3;
+		const int NOMBRE_DE_LANCES_PAR_TOUR = 3;
 
 		private int _nombreJoueurs;
 
 		private List<int> _des;
-		private List<bool> _desGardes;
+		private List<bool> _desGardees;
 
 		private List<Joueur> _joueurs;
 		private int _tourJoueur = 0;
-		private int _roulesRestants = NOMBRE_DE_ROULES_PAR_TOUR;
+		private int _lancesRestants = NOMBRE_DE_LANCES_PAR_TOUR;
 
 		public Partie(List<Joueur> joueurs)
 		{
 			_joueurs = joueurs;
 			_nombreJoueurs = joueurs.Count;
 			_des = new List<int> { 0, 0, 0, 0, 0 };
-			_desGardes = new List<bool> { false, false, false, false, false };
+			_desGardees = new List<bool> { false, false, false, false, false };
 		}
 
 		public void LancerDes()
 		{
+			if (_lancesRestants <= 0)
+			{
+				throw new Exception("Aucun lance restant pour ce tour.");
+			}
+
 			Random rand = new Random();
 			for (int i = 0; i < _des.Count; i++)
 			{
-				if (!_desGardes[i])
+				if (!_desGardees[i])
 				{
 					_des[i] = rand.Next(1, 7);
 				}
 			}
 
-			_roulesRestants--;
+			_lancesRestants--;
 		}
 
 		public void ProchainTour()
 		{
 			_tourJoueur = (_tourJoueur + 1) % _nombreJoueurs;
-			_desGardes = new List<bool> { false, false, false, false, false };
-			_roulesRestants = NOMBRE_DE_ROULES_PAR_TOUR;
+			_desGardees = new List<bool> { false, false, false, false, false };
+			_lancesRestants = NOMBRE_DE_LANCES_PAR_TOUR;
 		}
 
 		public List<int> Des
@@ -53,9 +58,9 @@ namespace TP_3
 			get { return _des; }
 		}
 
-		public int RoulesRestants
+		public int LancesRestants
 		{
-			get { return _roulesRestants; }
+			get { return _lancesRestants; }
 		}
 	}
 }
