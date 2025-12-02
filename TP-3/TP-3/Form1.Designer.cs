@@ -28,27 +28,15 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			checkBox1 = new CheckBox();
 			label1 = new Label();
 			pictureBox1 = new PictureBox();
 			button1 = new Button();
 			button2 = new Button();
-			panel1 = new Panel();
 			label2 = new Label();
 			button_creerJoueur = new Button();
+			checkedListBox_joueurs = new CheckedListBox();
 			((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-			panel1.SuspendLayout();
 			SuspendLayout();
-			// 
-			// checkBox1
-			// 
-			checkBox1.AutoSize = true;
-			checkBox1.Location = new Point(14, 16);
-			checkBox1.Name = "checkBox1";
-			checkBox1.Size = new Size(82, 19);
-			checkBox1.TabIndex = 1;
-			checkBox1.Text = "checkBox1";
-			checkBox1.UseVisualStyleBackColor = true;
 			// 
 			// label1
 			// 
@@ -87,15 +75,6 @@
 			button2.UseVisualStyleBackColor = true;
 			button2.Click += button2_Click;
 			// 
-			// panel1
-			// 
-			panel1.BackColor = SystemColors.ScrollBar;
-			panel1.Controls.Add(checkBox1);
-			panel1.Location = new Point(255, 51);
-			panel1.Name = "panel1";
-			panel1.Size = new Size(148, 122);
-			panel1.TabIndex = 6;
-			// 
 			// label2
 			// 
 			label2.AutoSize = true;
@@ -116,14 +95,22 @@
 			button_creerJoueur.UseVisualStyleBackColor = true;
 			button_creerJoueur.Click += button_creerJoueur_Click;
 			// 
+			// checkedListBox_joueurs
+			// 
+			checkedListBox_joueurs.FormattingEnabled = true;
+			checkedListBox_joueurs.Location = new Point(267, 61);
+			checkedListBox_joueurs.Name = "checkedListBox_joueurs";
+			checkedListBox_joueurs.Size = new Size(139, 112);
+			checkedListBox_joueurs.TabIndex = 9;
+			// 
 			// Form1
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
 			ClientSize = new Size(480, 282);
+			Controls.Add(checkedListBox_joueurs);
 			Controls.Add(button_creerJoueur);
 			Controls.Add(label2);
-			Controls.Add(panel1);
 			Controls.Add(button2);
 			Controls.Add(button1);
 			Controls.Add(pictureBox1);
@@ -131,21 +118,17 @@
 			Name = "Form1";
 			Text = "Form1";
 			((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-			panel1.ResumeLayout(false);
-			panel1.PerformLayout();
 			ResumeLayout(false);
 			PerformLayout();
 		}
 
 		#endregion
-
-		private CheckBox checkBox1;
-        private Label label1;
+		private Label label1;
         private PictureBox pictureBox1;
         private Button button1;
         private Button button2;
-        private Panel panel1;
         private Label label2;
         private Button button_creerJoueur;
-    }
+		private CheckedListBox checkedListBox_joueurs;
+	}
 }

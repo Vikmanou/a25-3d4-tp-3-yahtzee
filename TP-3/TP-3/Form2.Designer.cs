@@ -33,8 +33,8 @@
 			comboBox_couleur = new ComboBox();
 			listBox1 = new ListBox();
 			Sauvegarder = new Button();
-			button1 = new Button();
-			button2 = new Button();
+			button_nouvJoueur = new Button();
+			button_modifJoueur = new Button();
 			button3 = new Button();
 			label2 = new Label();
 			label3 = new Label();
@@ -84,24 +84,27 @@
 			Sauvegarder.TabIndex = 7;
 			Sauvegarder.Text = "Sauvegarder";
 			Sauvegarder.UseVisualStyleBackColor = true;
+			Sauvegarder.Click += Sauvegarder_Click;
 			// 
-			// button1
+			// button_nouvJoueur
 			// 
-			button1.Location = new Point(108, 204);
-			button1.Name = "button1";
-			button1.Size = new Size(109, 25);
-			button1.TabIndex = 8;
-			button1.Text = "Nouveau Joueur";
-			button1.UseVisualStyleBackColor = true;
+			button_nouvJoueur.Location = new Point(108, 204);
+			button_nouvJoueur.Name = "button_nouvJoueur";
+			button_nouvJoueur.Size = new Size(109, 25);
+			button_nouvJoueur.TabIndex = 8;
+			button_nouvJoueur.Text = "Nouveau Joueur";
+			button_nouvJoueur.UseVisualStyleBackColor = true;
+			button_nouvJoueur.Click += button_nouvJoueur_Click;
 			// 
-			// button2
+			// button_modifJoueur
 			// 
-			button2.Location = new Point(287, 171);
-			button2.Name = "button2";
-			button2.Size = new Size(169, 25);
-			button2.TabIndex = 9;
-			button2.Text = "Modifier Joueur";
-			button2.UseVisualStyleBackColor = true;
+			button_modifJoueur.Location = new Point(287, 171);
+			button_modifJoueur.Name = "button_modifJoueur";
+			button_modifJoueur.Size = new Size(169, 25);
+			button_modifJoueur.TabIndex = 9;
+			button_modifJoueur.Text = "Modifier Joueur";
+			button_modifJoueur.UseVisualStyleBackColor = true;
+			button_modifJoueur.Click += button_modifJoueur_Click;
 			// 
 			// button3
 			// 
@@ -111,6 +114,7 @@
 			button3.TabIndex = 10;
 			button3.Text = "Supprimer Joueur";
 			button3.UseVisualStyleBackColor = true;
+			button3.Click += button3_Click;
 			// 
 			// label2
 			// 
@@ -147,8 +151,8 @@
 			Controls.Add(label3);
 			Controls.Add(label2);
 			Controls.Add(button3);
-			Controls.Add(button2);
-			Controls.Add(button1);
+			Controls.Add(button_modifJoueur);
+			Controls.Add(button_nouvJoueur);
 			Controls.Add(Sauvegarder);
 			Controls.Add(listBox1);
 			Controls.Add(comboBox_couleur);
@@ -167,8 +171,8 @@
         private ComboBox comboBox_couleur;
         private ListBox listBox1;
         private Button Sauvegarder;
-        private Button button1;
-        private Button button2;
+        private Button button_nouvJoueur;
+        private Button button_modifJoueur;
         private Button button3;
         private Label label2;
         private Label label3;
