@@ -56,6 +56,21 @@ namespace TP_3
 			get { return _points; }
 		}
 
+		public int TotalPointsDesParties
+		{
+			get { return _totalPointsDesParties; }
+		}
+
+		public int PartiesJouees
+		{
+			get { return _partiesJouees; }
+		}
+
+		public int IdJoueur
+		{
+			get { return _idJoueur; }
+		}
+
 		public override string ToString()
 		{
 			return _identifiant;

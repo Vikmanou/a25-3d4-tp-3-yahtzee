@@ -28,13 +28,15 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			components = new System.ComponentModel.Container();
 			label1 = new Label();
 			pictureBox1 = new PictureBox();
-			button1 = new Button();
+			button_demarrer = new Button();
 			button2 = new Button();
 			label2 = new Label();
 			button_creerJoueur = new Button();
 			checkedListBox_joueurs = new CheckedListBox();
+			toolTip1 = new ToolTip(components);
 			((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
 			SuspendLayout();
 			// 
@@ -56,14 +58,15 @@
 			pictureBox1.TabIndex = 3;
 			pictureBox1.TabStop = false;
 			// 
-			// button1
+			// button_demarrer
 			// 
-			button1.Location = new Point(36, 226);
-			button1.Name = "button1";
-			button1.Size = new Size(138, 34);
-			button1.TabIndex = 4;
-			button1.Text = "Demarrer une partie";
-			button1.UseVisualStyleBackColor = true;
+			button_demarrer.Location = new Point(36, 226);
+			button_demarrer.Name = "button_demarrer";
+			button_demarrer.Size = new Size(138, 34);
+			button_demarrer.TabIndex = 4;
+			button_demarrer.Text = "Demarrer une partie";
+			button_demarrer.UseVisualStyleBackColor = true;
+			button_demarrer.Click += button_demarrer_Click;
 			// 
 			// button2
 			// 
@@ -102,6 +105,7 @@
 			checkedListBox_joueurs.Name = "checkedListBox_joueurs";
 			checkedListBox_joueurs.Size = new Size(139, 112);
 			checkedListBox_joueurs.TabIndex = 9;
+			checkedListBox_joueurs.SelectedIndexChanged += checkedListBox_joueurs_SelectedIndexChanged;
 			// 
 			// Form1
 			// 
@@ -112,7 +116,7 @@
 			Controls.Add(button_creerJoueur);
 			Controls.Add(label2);
 			Controls.Add(button2);
-			Controls.Add(button1);
+			Controls.Add(button_demarrer);
 			Controls.Add(pictureBox1);
 			Controls.Add(label1);
 			Name = "Form1";
@@ -125,10 +129,11 @@
 		#endregion
 		private Label label1;
         private PictureBox pictureBox1;
-        private Button button1;
+        private Button button_demarrer;
         private Button button2;
         private Label label2;
         private Button button_creerJoueur;
 		private CheckedListBox checkedListBox_joueurs;
+		private ToolTip toolTip1;
 	}
 }

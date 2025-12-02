@@ -8,6 +8,7 @@ namespace TP_3
 		{
 			InitializeComponent();
 			checkedListBox_joueurs.Items.Clear();
+			validerSi2JouersSelectionnes();
 		}
 
 		private void button2_Click(object sender, EventArgs e)
@@ -27,6 +28,25 @@ namespace TP_3
 					checkedListBox_joueurs.Items.Add(joueur);
 				}
 			}
+		}
+
+		private void validerSi2JouersSelectionnes()
+		{
+			if (checkedListBox_joueurs.CheckedItems.Count >= 2)
+			{
+				button_demarrer.Enabled = true;
+			}
+			else
+			{
+				button_demarrer.Enabled = false;
+			}
+		}
+
+		private void checkedListBox_joueurs_SelectedIndexChanged(object sender, EventArgs e) { validerSi2JouersSelectionnes(); }
+
+		private void button_demarrer_Click(object sender, EventArgs e)
+		{
+
 		}
 	}
 }

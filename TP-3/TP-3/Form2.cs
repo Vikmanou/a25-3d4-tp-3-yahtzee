@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -106,12 +107,56 @@ namespace TP_3
 
 		private void button_modifJoueur_Click(object sender, EventArgs e)
 		{
-			if (listBox1.SelectedItem != null) {
+			if (listBox1.SelectedItem != null)
+			{
 				Joueur joueur = (Joueur)listBox1.SelectedItem;
 				textBox_identifiant.Text = joueur.Identifiant;
 				comboBox_couleur.SelectedItem = joueur.Couleur;
 
 				modifieJoueur = true;
+			}
+		}
+
+		private void retourALaccueilToolStripMenuItem1_Click(object sender, EventArgs e)
+		{
+			this.Close();
+		}
+
+		private void exporterLesDonneesDuJoueurToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			if (listBox1.SelectedItem == null)
+			{
+				MessageBox.Show("Veuillez sélectionner un joueur à exporter.");
+				return;
+			}
+
+			Joueur joueur = (Joueur)listBox1.SelectedItem;
+
+			SaveFileDialog saveFileDialog = new SaveFileDialog();
+			saveFileDialog.Filter = "Fichier JSON | *.json | Tous les fichiers| *.* ";
+			saveFileDialog.FilterIndex = 1;
+			saveFileDialog.InitialDirectory = Application.StartupPath;
+			saveFileDialog.FileName = "joueur_" + joueur.Identifiant + "_donnees.json";
+			saveFileDialog.Title = "Exporter les données du joueur";
+
+			if (saveFileDialog.ShowDialog() == DialogResult.OK)
+			{
+				Dictionary<string, object> donneesJoueur = new Dictionary<string, object>
+				{
+					{ "ID", joueur.IdJoueur },
+					{ "Identifiant", joueur.Identifiant },
+					{ "Couleur", joueur.Couleur.ToString() },
+					{ "PointsTotal", joueur.TotalPointsDesParties },
+					{ "PartiesJouees", joueur.PartiesJouees }
+				};
+
+				var options = new JsonSerializerOptions
+				{
+					WriteIndented = true,
+					Encoder = System.Text.Encodings.Web.JavaScriptEncoder.UnsafeRelaxedJsonEscaping
+				};
+				var jsonString = JsonSerializer.Serialize(donneesJoueur, options);
+				File.WriteAllText(saveFileDialog.FileName, jsonString, System.Text.Encoding.UTF8);
 			}
 		}
 	}

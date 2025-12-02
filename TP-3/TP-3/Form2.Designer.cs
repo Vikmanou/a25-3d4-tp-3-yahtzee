@@ -38,7 +38,13 @@
 			button3 = new Button();
 			label2 = new Label();
 			label3 = new Label();
-			toolStrip1 = new ToolStrip();
+			menuStrip1 = new MenuStrip();
+			fichierToolStripMenuItem = new ToolStripMenuItem();
+			exporterLesDonneesDuJoueurToolStripMenuItem = new ToolStripMenuItem();
+			imprimerLesDonneesDuJoueurToolStripMenuItem = new ToolStripMenuItem();
+			retourALaccueilToolStripMenuItem = new ToolStripSeparator();
+			retourALaccueilToolStripMenuItem1 = new ToolStripMenuItem();
+			menuStrip1.SuspendLayout();
 			SuspendLayout();
 			// 
 			// textBox_identifiant
@@ -134,20 +140,53 @@
 			label3.TabIndex = 12;
 			label3.Text = "Couleur :";
 			// 
-			// toolStrip1
+			// menuStrip1
 			// 
-			toolStrip1.Location = new Point(0, 0);
-			toolStrip1.Name = "toolStrip1";
-			toolStrip1.Size = new Size(483, 25);
-			toolStrip1.TabIndex = 13;
-			toolStrip1.Text = "toolStrip1";
+			menuStrip1.Items.AddRange(new ToolStripItem[] { fichierToolStripMenuItem });
+			menuStrip1.Location = new Point(0, 0);
+			menuStrip1.Name = "menuStrip1";
+			menuStrip1.Size = new Size(483, 24);
+			menuStrip1.TabIndex = 14;
+			menuStrip1.Text = "menuStrip1";
+			// 
+			// fichierToolStripMenuItem
+			// 
+			fichierToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { exporterLesDonneesDuJoueurToolStripMenuItem, imprimerLesDonneesDuJoueurToolStripMenuItem, retourALaccueilToolStripMenuItem, retourALaccueilToolStripMenuItem1 });
+			fichierToolStripMenuItem.Name = "fichierToolStripMenuItem";
+			fichierToolStripMenuItem.Size = new Size(54, 20);
+			fichierToolStripMenuItem.Text = "&Fichier";
+			// 
+			// exporterLesDonneesDuJoueurToolStripMenuItem
+			// 
+			exporterLesDonneesDuJoueurToolStripMenuItem.Name = "exporterLesDonneesDuJoueurToolStripMenuItem";
+			exporterLesDonneesDuJoueurToolStripMenuItem.Size = new Size(242, 22);
+			exporterLesDonneesDuJoueurToolStripMenuItem.Text = "Exporter les donnees du joueur";
+			exporterLesDonneesDuJoueurToolStripMenuItem.Click += exporterLesDonneesDuJoueurToolStripMenuItem_Click;
+			// 
+			// imprimerLesDonneesDuJoueurToolStripMenuItem
+			// 
+			imprimerLesDonneesDuJoueurToolStripMenuItem.Name = "imprimerLesDonneesDuJoueurToolStripMenuItem";
+			imprimerLesDonneesDuJoueurToolStripMenuItem.Size = new Size(242, 22);
+			imprimerLesDonneesDuJoueurToolStripMenuItem.Text = "Imprimer les donnees du joueur";
+			// 
+			// retourALaccueilToolStripMenuItem
+			// 
+			retourALaccueilToolStripMenuItem.Name = "retourALaccueilToolStripMenuItem";
+			retourALaccueilToolStripMenuItem.Size = new Size(239, 6);
+			// 
+			// retourALaccueilToolStripMenuItem1
+			// 
+			retourALaccueilToolStripMenuItem1.Name = "retourALaccueilToolStripMenuItem1";
+			retourALaccueilToolStripMenuItem1.Size = new Size(242, 22);
+			retourALaccueilToolStripMenuItem1.Text = "Retour a l'accueil";
+			retourALaccueilToolStripMenuItem1.Click += retourALaccueilToolStripMenuItem1_Click;
 			// 
 			// Form2
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
 			ClientSize = new Size(483, 253);
-			Controls.Add(toolStrip1);
+			Controls.Add(menuStrip1);
 			Controls.Add(label3);
 			Controls.Add(label2);
 			Controls.Add(button3);
@@ -158,8 +197,11 @@
 			Controls.Add(comboBox_couleur);
 			Controls.Add(label1);
 			Controls.Add(textBox_identifiant);
+			MainMenuStrip = menuStrip1;
 			Name = "Form2";
 			Text = "Form2";
+			menuStrip1.ResumeLayout(false);
+			menuStrip1.PerformLayout();
 			ResumeLayout(false);
 			PerformLayout();
 		}
@@ -176,6 +218,11 @@
         private Button button3;
         private Label label2;
         private Label label3;
-        private ToolStrip toolStrip1;
-    }
+		private MenuStrip menuStrip1;
+		private ToolStripMenuItem fichierToolStripMenuItem;
+		private ToolStripMenuItem exporterLesDonneesDuJoueurToolStripMenuItem;
+		private ToolStripMenuItem imprimerLesDonneesDuJoueurToolStripMenuItem;
+		private ToolStripSeparator retourALaccueilToolStripMenuItem;
+		private ToolStripMenuItem retourALaccueilToolStripMenuItem1;
+	}
 }
