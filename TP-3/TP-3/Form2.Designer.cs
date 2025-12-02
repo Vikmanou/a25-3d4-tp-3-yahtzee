@@ -45,12 +45,14 @@
 			retourALaccueilToolStripMenuItem = new ToolStripSeparator();
 			retourALaccueilToolStripMenuItem1 = new ToolStripMenuItem();
 			printDocument1 = new System.Drawing.Printing.PrintDocument();
+			label4 = new Label();
+			comboBox_colDe = new ComboBox();
 			menuStrip1.SuspendLayout();
 			SuspendLayout();
 			// 
 			// textBox_identifiant
 			// 
-			textBox_identifiant.Location = new Point(108, 112);
+			textBox_identifiant.Location = new Point(117, 112);
 			textBox_identifiant.Name = "textBox_identifiant";
 			textBox_identifiant.Size = new Size(100, 23);
 			textBox_identifiant.TabIndex = 0;
@@ -68,7 +70,7 @@
 			// comboBox_couleur
 			// 
 			comboBox_couleur.FormattingEnabled = true;
-			comboBox_couleur.Location = new Point(108, 154);
+			comboBox_couleur.Location = new Point(117, 142);
 			comboBox_couleur.Name = "comboBox_couleur";
 			comboBox_couleur.Size = new Size(100, 23);
 			comboBox_couleur.TabIndex = 5;
@@ -131,15 +133,17 @@
 			label2.Size = new Size(67, 15);
 			label2.TabIndex = 11;
 			label2.Text = "Identifiant :";
+			label2.TextAlign = ContentAlignment.MiddleLeft;
 			// 
 			// label3
 			// 
 			label3.AutoSize = true;
-			label3.Location = new Point(21, 157);
+			label3.Location = new Point(21, 144);
 			label3.Name = "label3";
-			label3.Size = new Size(55, 15);
+			label3.Size = new Size(92, 15);
 			label3.TabIndex = 12;
-			label3.Text = "Couleur :";
+			label3.Text = "Couleur Avatar :";
+			label3.TextAlign = ContentAlignment.MiddleLeft;
 			// 
 			// menuStrip1
 			// 
@@ -160,7 +164,7 @@
 			// exporterLesDonneesDuJoueurToolStripMenuItem
 			// 
 			exporterLesDonneesDuJoueurToolStripMenuItem.Name = "exporterLesDonneesDuJoueurToolStripMenuItem";
-			exporterLesDonneesDuJoueurToolStripMenuItem.Size = new Size(242, 22);
+			exporterLesDonneesDuJoueurToolStripMenuItem.Size = new Size(246, 22);
 			exporterLesDonneesDuJoueurToolStripMenuItem.Text = "Exporter les donnees du joueur";
 			exporterLesDonneesDuJoueurToolStripMenuItem.Click += exporterLesDonneesDuJoueurToolStripMenuItem_Click;
 			// 
@@ -174,20 +178,41 @@
 			// retourALaccueilToolStripMenuItem
 			// 
 			retourALaccueilToolStripMenuItem.Name = "retourALaccueilToolStripMenuItem";
-			retourALaccueilToolStripMenuItem.Size = new Size(239, 6);
+			retourALaccueilToolStripMenuItem.Size = new Size(243, 6);
 			// 
 			// retourALaccueilToolStripMenuItem1
 			// 
 			retourALaccueilToolStripMenuItem1.Name = "retourALaccueilToolStripMenuItem1";
-			retourALaccueilToolStripMenuItem1.Size = new Size(242, 22);
+			retourALaccueilToolStripMenuItem1.Size = new Size(246, 22);
 			retourALaccueilToolStripMenuItem1.Text = "Retour a l'accueil";
 			retourALaccueilToolStripMenuItem1.Click += retourALaccueilToolStripMenuItem1_Click;
+			// 
+			// label4
+			// 
+			label4.AutoSize = true;
+			label4.Location = new Point(20, 171);
+			label4.Name = "label4";
+			label4.Size = new Size(77, 15);
+			label4.TabIndex = 16;
+			label4.Text = "Couleur Dés :";
+			label4.TextAlign = ContentAlignment.MiddleLeft;
+			label4.Click += label4_Click;
+			// 
+			// comboBox_colDe
+			// 
+			comboBox_colDe.FormattingEnabled = true;
+			comboBox_colDe.Location = new Point(116, 169);
+			comboBox_colDe.Name = "comboBox_colDe";
+			comboBox_colDe.Size = new Size(100, 23);
+			comboBox_colDe.TabIndex = 15;
 			// 
 			// Form2
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
 			ClientSize = new Size(483, 253);
+			Controls.Add(label4);
+			Controls.Add(comboBox_colDe);
 			Controls.Add(menuStrip1);
 			Controls.Add(label3);
 			Controls.Add(label2);
@@ -227,5 +252,7 @@
 		private ToolStripSeparator retourALaccueilToolStripMenuItem;
 		private ToolStripMenuItem retourALaccueilToolStripMenuItem1;
 		private System.Drawing.Printing.PrintDocument printDocument1;
+		private Label label4;
+		private ComboBox comboBox_colDe;
 	}
 }

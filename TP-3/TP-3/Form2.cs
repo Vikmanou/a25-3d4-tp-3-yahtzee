@@ -14,7 +14,8 @@ namespace TP_3
 	internal partial class Form2 : Form
 	{
 		List<Joueur> joueurs = new List<Joueur>();
-		List<Color> couleurs = new List<Color> { Color.Red, Color.Blue, Color.Green, Color.Yellow, Color.Orange };
+		List<Color> couleurs = new List<Color> { Color.Red, Color.Blue, Color.Green, Color.Yellow, Color.Orange, Color.Black };
+		List<Color> couleursDes = new List<Color> { Color.Black, Color.White, Color.Blue, Color.Yellow, Color.Red, Color.Green };
 
 		private bool modifieJoueur = false;
 
@@ -34,6 +35,12 @@ namespace TP_3
 			foreach (Color couleur in couleurs)
 			{
 				comboBox_couleur.Items.Add(couleur);
+			}
+
+			comboBox_colDe.Items.Clear();
+			foreach (Color couleur in couleursDes)
+			{
+				comboBox_colDe.Items.Add(couleur);
 			}
 
 			listBox1_SelectedIndexChanged(null, null);
@@ -57,6 +64,7 @@ namespace TP_3
 		private void button_nouvJoueur_Click(object sender, EventArgs e)
 		{
 			comboBox_couleur.SelectedItem = null;
+			comboBox_colDe.SelectedItem = null;
 			textBox_identifiant.Clear();
 		}
 
@@ -65,6 +73,12 @@ namespace TP_3
 			if (comboBox_couleur.SelectedItem == null)
 			{
 				MessageBox.Show("Veuillez sélectionner une couleur.");
+				return;
+			}
+
+			if (comboBox_colDe.SelectedItem == null)
+			{
+				MessageBox.Show("Veuillez sélectionner une couleur pour le dé.");
 				return;
 			}
 
@@ -85,10 +99,14 @@ namespace TP_3
 				listBox1.Items.Remove(joueurAEnlever);
 			}
 
-			Joueur joueur = new Joueur(textBox_identifiant.Text, (Color)comboBox_couleur.SelectedItem);
+			Joueur joueur = new Joueur(textBox_identifiant.Text, (Color)comboBox_couleur.SelectedItem, (Color)comboBox_colDe.SelectedItem);
 
 			joueurs.Add(joueur);
 			listBox1.Items.Add(joueur);
+
+			textBox_identifiant.Clear();
+			comboBox_couleur.SelectedItem = null;
+			comboBox_colDe.SelectedItem = null;
 		}
 
 		private void button3_Click(object sender, EventArgs e)
@@ -112,6 +130,7 @@ namespace TP_3
 				Joueur joueur = (Joueur)listBox1.SelectedItem;
 				textBox_identifiant.Text = joueur.Identifiant;
 				comboBox_couleur.SelectedItem = joueur.Couleur;
+				comboBox_colDe.SelectedItem = joueur.CouleurDes;
 
 				modifieJoueur = true;
 			}
@@ -173,6 +192,11 @@ namespace TP_3
 			{
 				MessageBox.Show("L'imprimante spécifiée n'est pas valide.");
 			}
+		}
+
+		private void label4_Click(object sender, EventArgs e)
+		{
+
 		}
 	}
 }

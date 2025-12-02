@@ -12,16 +12,18 @@ namespace TP_3
 
 		private string _identifiant;
 		private Color _couleur;
+		private Color _couleurDes;
 		private int _idJoueur;
 
 		private int _points;
 		private int _partiesJouees;
 		private int _totalPointsDesParties;
 
-		public Joueur(string identifiant, Color couleur)
+		public Joueur(string identifiant, Color couleur, Color couleurDes)
 		{
 			_identifiant = identifiant;
 			_couleur = couleur;
+			_couleurDes = couleurDes;
 			_idJoueur = compteurJoueurs;
 			compteurJoueurs++;
 			_points = 0;
@@ -69,6 +71,11 @@ namespace TP_3
 		public int IdJoueur
 		{
 			get { return _idJoueur; }
+		}
+
+		public Color CouleurDes
+		{
+			get { return _couleurDes; }
 		}
 
 		public override string ToString()
