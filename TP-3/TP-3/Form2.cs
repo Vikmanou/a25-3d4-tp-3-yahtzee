@@ -159,5 +159,20 @@ namespace TP_3
 				File.WriteAllText(saveFileDialog.FileName, jsonString, System.Text.Encoding.UTF8);
 			}
 		}
+
+		private void imprimerLesDonneesDuJoueurToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			printDocument1.PrinterSettings.PrinterName = "Microsoft Print to PDF";
+			printDocument1.DefaultPageSettings.Landscape = false;
+
+			if (printDocument1.PrinterSettings.IsValid)
+			{
+				printDocument1.Print();
+			}
+			else
+			{
+				MessageBox.Show("L'imprimante spécifiée n'est pas valide.");
+			}
+		}
 	}
 }

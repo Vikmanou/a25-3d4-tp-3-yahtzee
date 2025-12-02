@@ -41,9 +41,10 @@
 			menuStrip1 = new MenuStrip();
 			fichierToolStripMenuItem = new ToolStripMenuItem();
 			exporterLesDonneesDuJoueurToolStripMenuItem = new ToolStripMenuItem();
-			imprimerLesDonneesDuJoueurToolStripMenuItem = new ToolStripMenuItem();
+			imprimerLesDonneesDesJoueurToolStripMenuItem = new ToolStripMenuItem();
 			retourALaccueilToolStripMenuItem = new ToolStripSeparator();
 			retourALaccueilToolStripMenuItem1 = new ToolStripMenuItem();
+			printDocument1 = new System.Drawing.Printing.PrintDocument();
 			menuStrip1.SuspendLayout();
 			SuspendLayout();
 			// 
@@ -151,7 +152,7 @@
 			// 
 			// fichierToolStripMenuItem
 			// 
-			fichierToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { exporterLesDonneesDuJoueurToolStripMenuItem, imprimerLesDonneesDuJoueurToolStripMenuItem, retourALaccueilToolStripMenuItem, retourALaccueilToolStripMenuItem1 });
+			fichierToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { exporterLesDonneesDuJoueurToolStripMenuItem, imprimerLesDonneesDesJoueurToolStripMenuItem, retourALaccueilToolStripMenuItem, retourALaccueilToolStripMenuItem1 });
 			fichierToolStripMenuItem.Name = "fichierToolStripMenuItem";
 			fichierToolStripMenuItem.Size = new Size(54, 20);
 			fichierToolStripMenuItem.Text = "&Fichier";
@@ -163,11 +164,12 @@
 			exporterLesDonneesDuJoueurToolStripMenuItem.Text = "Exporter les donnees du joueur";
 			exporterLesDonneesDuJoueurToolStripMenuItem.Click += exporterLesDonneesDuJoueurToolStripMenuItem_Click;
 			// 
-			// imprimerLesDonneesDuJoueurToolStripMenuItem
+			// imprimerLesDonneesDesJoueurToolStripMenuItem
 			// 
-			imprimerLesDonneesDuJoueurToolStripMenuItem.Name = "imprimerLesDonneesDuJoueurToolStripMenuItem";
-			imprimerLesDonneesDuJoueurToolStripMenuItem.Size = new Size(242, 22);
-			imprimerLesDonneesDuJoueurToolStripMenuItem.Text = "Imprimer les donnees du joueur";
+			imprimerLesDonneesDesJoueurToolStripMenuItem.Name = "imprimerLesDonneesDesJoueurToolStripMenuItem";
+			imprimerLesDonneesDesJoueurToolStripMenuItem.Size = new Size(246, 22);
+			imprimerLesDonneesDesJoueurToolStripMenuItem.Text = "Imprimer les donnees des joueur";
+			imprimerLesDonneesDesJoueurToolStripMenuItem.Click += imprimerLesDonneesDuJoueurToolStripMenuItem_Click;
 			// 
 			// retourALaccueilToolStripMenuItem
 			// 
@@ -221,8 +223,9 @@
 		private MenuStrip menuStrip1;
 		private ToolStripMenuItem fichierToolStripMenuItem;
 		private ToolStripMenuItem exporterLesDonneesDuJoueurToolStripMenuItem;
-		private ToolStripMenuItem imprimerLesDonneesDuJoueurToolStripMenuItem;
+		private ToolStripMenuItem imprimerLesDonneesDesJoueurToolStripMenuItem;
 		private ToolStripSeparator retourALaccueilToolStripMenuItem;
 		private ToolStripMenuItem retourALaccueilToolStripMenuItem1;
+		private System.Drawing.Printing.PrintDocument printDocument1;
 	}
 }
