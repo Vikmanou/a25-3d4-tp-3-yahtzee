@@ -14,7 +14,7 @@ namespace TP_3
 	internal partial class Form2 : Form
 	{
 		List<Joueur> joueurs = new List<Joueur>();
-		List<Color> couleurs = new List<Color> { Color.Red, Color.Blue, Color.Green, Color.Yellow };
+		List<Color> couleurs = new List<Color> { Color.Red, Color.Blue, Color.Green, Color.Yellow, Color.Orange };
 
 		private bool modifieJoueur = false;
 

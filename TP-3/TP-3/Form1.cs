@@ -46,7 +46,14 @@ namespace TP_3
 
 		private void button_demarrer_Click(object sender, EventArgs e)
 		{
+			if (checkedListBox_joueurs.CheckedItems.Count < 2)
+			{
+				MessageBox.Show("Veuillez sélectionner au moins deux joueurs pour démarrer la partie.");
+				return;
+			}
 
+			Form3 form3 = new Form3(joueurs);
+			form3.ShowDialog();
 		}
 	}
 }

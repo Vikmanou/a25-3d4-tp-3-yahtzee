@@ -33,8 +33,8 @@
 			nouvellePartieToolStripMenuItem = new ToolStripMenuItem();
 			label1 = new Label();
 			pictureBox1 = new PictureBox();
-			label2 = new Label();
-			label3 = new Label();
+			label_j1 = new Label();
+			label_j2 = new Label();
 			label4 = new Label();
 			label5 = new Label();
 			label6 = new Label();
@@ -52,6 +52,8 @@
 			label18 = new Label();
 			label19 = new Label();
 			label20 = new Label();
+			panel_colj1 = new Panel();
+			panel_colj2 = new Panel();
 			contextMenuStrip1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
 			SuspendLayout();
@@ -86,23 +88,23 @@
 			pictureBox1.TabIndex = 5;
 			pictureBox1.TabStop = false;
 			// 
-			// label2
+			// label_j1
 			// 
-			label2.AutoSize = true;
-			label2.Location = new Point(633, 12);
-			label2.Name = "label2";
-			label2.Size = new Size(48, 15);
-			label2.TabIndex = 10;
-			label2.Text = "Joueur1";
+			label_j1.AutoSize = true;
+			label_j1.Location = new Point(633, 12);
+			label_j1.Name = "label_j1";
+			label_j1.Size = new Size(48, 15);
+			label_j1.TabIndex = 10;
+			label_j1.Text = "Joueur1";
 			// 
-			// label3
+			// label_j2
 			// 
-			label3.AutoSize = true;
-			label3.Location = new Point(708, 12);
-			label3.Name = "label3";
-			label3.Size = new Size(48, 15);
-			label3.TabIndex = 11;
-			label3.Text = "Joueur1";
+			label_j2.AutoSize = true;
+			label_j2.Location = new Point(729, 12);
+			label_j2.Name = "label_j2";
+			label_j2.Size = new Size(48, 15);
+			label_j2.TabIndex = 11;
+			label_j2.Text = "Joueur1";
 			// 
 			// label4
 			// 
@@ -257,11 +259,29 @@
 			label20.TabIndex = 28;
 			label20.Text = "Total";
 			// 
+			// panel_colj1
+			// 
+			panel_colj1.BackColor = SystemColors.ActiveCaption;
+			panel_colj1.Location = new Point(609, 12);
+			panel_colj1.Name = "panel_colj1";
+			panel_colj1.Size = new Size(18, 18);
+			panel_colj1.TabIndex = 29;
+			// 
+			// panel_colj2
+			// 
+			panel_colj2.BackColor = SystemColors.ActiveCaption;
+			panel_colj2.Location = new Point(705, 12);
+			panel_colj2.Name = "panel_colj2";
+			panel_colj2.Size = new Size(18, 18);
+			panel_colj2.TabIndex = 30;
+			// 
 			// Form3
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
 			ClientSize = new Size(800, 497);
+			Controls.Add(panel_colj2);
+			Controls.Add(panel_colj1);
 			Controls.Add(label20);
 			Controls.Add(label19);
 			Controls.Add(label18);
@@ -279,8 +299,8 @@
 			Controls.Add(label6);
 			Controls.Add(label5);
 			Controls.Add(label4);
-			Controls.Add(label3);
-			Controls.Add(label2);
+			Controls.Add(label_j2);
+			Controls.Add(label_j1);
 			Controls.Add(pictureBox1);
 			Controls.Add(label1);
 			Name = "Form3";
@@ -297,8 +317,8 @@
         private ToolStripMenuItem nouvellePartieToolStripMenuItem;
         private Label label1;
         private PictureBox pictureBox1;
-		private Label label2;
-		private Label label3;
+		private Label label_j1;
+		private Label label_j2;
 		private Label label4;
 		private Label label5;
 		private Label label6;
@@ -316,5 +336,7 @@
 		private Label label18;
 		private Label label19;
 		private Label label20;
+		private Panel panel_colj1;
+		private Panel panel_colj2;
 	}
 }
