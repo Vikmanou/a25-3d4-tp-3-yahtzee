@@ -49,44 +49,41 @@
 			label15 = new Label();
 			label16 = new Label();
 			label17 = new Label();
-			label18 = new Label();
 			label19 = new Label();
 			label20 = new Label();
 			panel_colj1 = new Panel();
 			panel_colj2 = new Panel();
 			button_uns1 = new Button();
-			button2 = new Button();
-			button3 = new Button();
-			button6 = new Button();
-			button7 = new Button();
-			button8 = new Button();
-			button9 = new Button();
-			button10 = new Button();
-			button11 = new Button();
-			button12 = new Button();
-			button13 = new Button();
-			button14 = new Button();
-			button15 = new Button();
-			button18 = new Button();
+			button_fourOfAKind1 = new Button();
+			button_threeOfAKind1 = new Button();
+			button_six1 = new Button();
+			button_cinqs1 = new Button();
+			button_quatres1 = new Button();
+			button_trois1 = new Button();
+			button_deux1 = new Button();
+			button_chance1 = new Button();
+			button_largeStraight1 = new Button();
+			button_smallStraight1 = new Button();
+			button_fullHouse1 = new Button();
+			button_yahtzee1 = new Button();
 			label2 = new Label();
 			label3 = new Label();
 			label21 = new Label();
 			label22 = new Label();
 			label23 = new Label();
 			label24 = new Label();
-			button4 = new Button();
-			button5 = new Button();
-			button16 = new Button();
-			button17 = new Button();
-			button19 = new Button();
-			button20 = new Button();
-			button21 = new Button();
-			button22 = new Button();
-			button23 = new Button();
-			button24 = new Button();
-			button25 = new Button();
-			button26 = new Button();
-			button27 = new Button();
+			button_yahtzee2 = new Button();
+			button_fullHouse2 = new Button();
+			button_smallStraight2 = new Button();
+			button_largeStraight2 = new Button();
+			button_chance2 = new Button();
+			button_deux2 = new Button();
+			button_trois2 = new Button();
+			button_quatres2 = new Button();
+			button_cinqs2 = new Button();
+			button_six2 = new Button();
+			button_threeOfAKind2 = new Button();
+			button_fourOfAKind2 = new Button();
 			button_uns2 = new Button();
 			deMain2 = new PictureBox();
 			deMain4 = new PictureBox();
@@ -289,19 +286,10 @@
 			label17.TabIndex = 25;
 			label17.Text = "Chance";
 			// 
-			// label18
-			// 
-			label18.AutoSize = true;
-			label18.Location = new Point(548, 404);
-			label18.Name = "label18";
-			label18.Size = new Size(80, 15);
-			label18.TabIndex = 26;
-			label18.Text = "Large Straight";
-			// 
 			// label19
 			// 
 			label19.AutoSize = true;
-			label19.Location = new Point(549, 429);
+			label19.Location = new Point(549, 404);
 			label19.Name = "label19";
 			label19.Size = new Size(56, 15);
 			label19.TabIndex = 27;
@@ -310,9 +298,10 @@
 			// label20
 			// 
 			label20.AutoSize = true;
-			label20.Location = new Point(549, 459);
+			label20.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+			label20.Location = new Point(556, 447);
 			label20.Name = "label20";
-			label20.Size = new Size(33, 15);
+			label20.Size = new Size(42, 21);
 			label20.TabIndex = 28;
 			label20.Text = "Total";
 			// 
@@ -341,141 +330,144 @@
 			button_uns1.Text = "-";
 			button_uns1.TextAlign = ContentAlignment.TopCenter;
 			button_uns1.UseVisualStyleBackColor = true;
+			button_uns1.Click += button_uns1_Click;
 			// 
-			// button2
+			// button_fourOfAKind1
 			// 
-			button2.Location = new Point(633, 273);
-			button2.Name = "button2";
-			button2.Size = new Size(75, 20);
-			button2.TabIndex = 32;
-			button2.Text = "-";
-			button2.TextAlign = ContentAlignment.TopCenter;
-			button2.UseVisualStyleBackColor = true;
+			button_fourOfAKind1.Location = new Point(633, 273);
+			button_fourOfAKind1.Name = "button_fourOfAKind1";
+			button_fourOfAKind1.Size = new Size(75, 20);
+			button_fourOfAKind1.TabIndex = 32;
+			button_fourOfAKind1.Text = "-";
+			button_fourOfAKind1.TextAlign = ContentAlignment.TopCenter;
+			button_fourOfAKind1.UseVisualStyleBackColor = true;
+			button_fourOfAKind1.Click += button_fourOfAKind1_Click;
 			// 
-			// button3
+			// button_threeOfAKind1
 			// 
-			button3.Location = new Point(633, 247);
-			button3.Name = "button3";
-			button3.Size = new Size(75, 20);
-			button3.TabIndex = 33;
-			button3.Text = "-";
-			button3.TextAlign = ContentAlignment.TopCenter;
-			button3.UseVisualStyleBackColor = true;
+			button_threeOfAKind1.Location = new Point(633, 247);
+			button_threeOfAKind1.Name = "button_threeOfAKind1";
+			button_threeOfAKind1.Size = new Size(75, 20);
+			button_threeOfAKind1.TabIndex = 33;
+			button_threeOfAKind1.Text = "-";
+			button_threeOfAKind1.TextAlign = ContentAlignment.TopCenter;
+			button_threeOfAKind1.UseVisualStyleBackColor = true;
+			button_threeOfAKind1.Click += button_threeOfAKind1_Click;
 			// 
-			// button6
+			// button_six1
 			// 
-			button6.Location = new Point(633, 165);
-			button6.Name = "button6";
-			button6.Size = new Size(75, 20);
-			button6.TabIndex = 36;
-			button6.Text = "-";
-			button6.TextAlign = ContentAlignment.TopCenter;
-			button6.UseVisualStyleBackColor = true;
+			button_six1.Location = new Point(633, 165);
+			button_six1.Name = "button_six1";
+			button_six1.Size = new Size(75, 20);
+			button_six1.TabIndex = 36;
+			button_six1.Text = "-";
+			button_six1.TextAlign = ContentAlignment.TopCenter;
+			button_six1.UseVisualStyleBackColor = true;
+			button_six1.Click += button_six1_Click;
 			// 
-			// button7
+			// button_cinqs1
 			// 
-			button7.Location = new Point(634, 143);
-			button7.Name = "button7";
-			button7.Size = new Size(75, 20);
-			button7.TabIndex = 37;
-			button7.Text = "-";
-			button7.TextAlign = ContentAlignment.TopCenter;
-			button7.UseVisualStyleBackColor = true;
+			button_cinqs1.Location = new Point(634, 143);
+			button_cinqs1.Name = "button_cinqs1";
+			button_cinqs1.Size = new Size(75, 20);
+			button_cinqs1.TabIndex = 37;
+			button_cinqs1.Text = "-";
+			button_cinqs1.TextAlign = ContentAlignment.TopCenter;
+			button_cinqs1.UseVisualStyleBackColor = true;
+			button_cinqs1.Click += button_cinqs1_Click;
 			// 
-			// button8
+			// button_quatres1
 			// 
-			button8.Location = new Point(633, 115);
-			button8.Name = "button8";
-			button8.Size = new Size(75, 20);
-			button8.TabIndex = 38;
-			button8.Text = "-";
-			button8.TextAlign = ContentAlignment.TopCenter;
-			button8.UseVisualStyleBackColor = true;
+			button_quatres1.Location = new Point(633, 115);
+			button_quatres1.Name = "button_quatres1";
+			button_quatres1.Size = new Size(75, 20);
+			button_quatres1.TabIndex = 38;
+			button_quatres1.Text = "-";
+			button_quatres1.TextAlign = ContentAlignment.TopCenter;
+			button_quatres1.UseVisualStyleBackColor = true;
+			button_quatres1.Click += button_quatres1_Click;
 			// 
-			// button9
+			// button_trois1
 			// 
-			button9.Location = new Point(633, 92);
-			button9.Name = "button9";
-			button9.Size = new Size(75, 20);
-			button9.TabIndex = 39;
-			button9.Text = "-";
-			button9.TextAlign = ContentAlignment.TopCenter;
-			button9.UseVisualStyleBackColor = true;
+			button_trois1.Location = new Point(633, 92);
+			button_trois1.Name = "button_trois1";
+			button_trois1.Size = new Size(75, 20);
+			button_trois1.TabIndex = 39;
+			button_trois1.Text = "-";
+			button_trois1.TextAlign = ContentAlignment.TopCenter;
+			button_trois1.UseVisualStyleBackColor = true;
+			button_trois1.Click += button_trois1_Click;
 			// 
-			// button10
+			// button_deux1
 			// 
-			button10.Location = new Point(633, 71);
-			button10.Name = "button10";
-			button10.Size = new Size(75, 20);
-			button10.TabIndex = 40;
-			button10.Text = "-";
-			button10.TextAlign = ContentAlignment.TopCenter;
-			button10.UseVisualStyleBackColor = true;
+			button_deux1.Location = new Point(633, 71);
+			button_deux1.Name = "button_deux1";
+			button_deux1.Size = new Size(75, 20);
+			button_deux1.TabIndex = 40;
+			button_deux1.Text = "-";
+			button_deux1.TextAlign = ContentAlignment.TopCenter;
+			button_deux1.UseVisualStyleBackColor = true;
+			button_deux1.Click += button_deux1_Click;
 			// 
-			// button11
+			// button_chance1
 			// 
-			button11.Location = new Point(634, 404);
-			button11.Name = "button11";
-			button11.Size = new Size(75, 20);
-			button11.TabIndex = 41;
-			button11.Text = "-";
-			button11.TextAlign = ContentAlignment.TopCenter;
-			button11.UseVisualStyleBackColor = true;
+			button_chance1.Location = new Point(634, 378);
+			button_chance1.Name = "button_chance1";
+			button_chance1.Size = new Size(75, 20);
+			button_chance1.TabIndex = 42;
+			button_chance1.Text = "-";
+			button_chance1.TextAlign = ContentAlignment.TopCenter;
+			button_chance1.UseVisualStyleBackColor = true;
+			button_chance1.Click += button_chance1_Click;
 			// 
-			// button12
+			// button_largeStraight1
 			// 
-			button12.Location = new Point(634, 378);
-			button12.Name = "button12";
-			button12.Size = new Size(75, 20);
-			button12.TabIndex = 42;
-			button12.Text = "-";
-			button12.TextAlign = ContentAlignment.TopCenter;
-			button12.UseVisualStyleBackColor = true;
+			button_largeStraight1.Location = new Point(633, 352);
+			button_largeStraight1.Name = "button_largeStraight1";
+			button_largeStraight1.Size = new Size(75, 20);
+			button_largeStraight1.TabIndex = 43;
+			button_largeStraight1.Text = "-";
+			button_largeStraight1.TextAlign = ContentAlignment.TopCenter;
+			button_largeStraight1.UseVisualStyleBackColor = true;
+			button_largeStraight1.Click += button_largeStraight1_Click;
 			// 
-			// button13
+			// button_smallStraight1
 			// 
-			button13.Location = new Point(633, 352);
-			button13.Name = "button13";
-			button13.Size = new Size(75, 20);
-			button13.TabIndex = 43;
-			button13.Text = "-";
-			button13.TextAlign = ContentAlignment.TopCenter;
-			button13.UseVisualStyleBackColor = true;
+			button_smallStraight1.Location = new Point(633, 326);
+			button_smallStraight1.Name = "button_smallStraight1";
+			button_smallStraight1.Size = new Size(75, 20);
+			button_smallStraight1.TabIndex = 44;
+			button_smallStraight1.Text = "-";
+			button_smallStraight1.TextAlign = ContentAlignment.TopCenter;
+			button_smallStraight1.UseVisualStyleBackColor = true;
+			button_smallStraight1.Click += button_smallStraight1_Click;
 			// 
-			// button14
+			// button_fullHouse1
 			// 
-			button14.Location = new Point(633, 326);
-			button14.Name = "button14";
-			button14.Size = new Size(75, 20);
-			button14.TabIndex = 44;
-			button14.Text = "-";
-			button14.TextAlign = ContentAlignment.TopCenter;
-			button14.UseVisualStyleBackColor = true;
+			button_fullHouse1.Location = new Point(633, 300);
+			button_fullHouse1.Name = "button_fullHouse1";
+			button_fullHouse1.Size = new Size(75, 20);
+			button_fullHouse1.TabIndex = 45;
+			button_fullHouse1.Text = "-";
+			button_fullHouse1.TextAlign = ContentAlignment.TopCenter;
+			button_fullHouse1.UseVisualStyleBackColor = true;
+			button_fullHouse1.Click += button_fullHouse1_Click;
 			// 
-			// button15
+			// button_yahtzee1
 			// 
-			button15.Location = new Point(633, 300);
-			button15.Name = "button15";
-			button15.Size = new Size(75, 20);
-			button15.TabIndex = 45;
-			button15.Text = "-";
-			button15.TextAlign = ContentAlignment.TopCenter;
-			button15.UseVisualStyleBackColor = true;
-			// 
-			// button18
-			// 
-			button18.Location = new Point(634, 430);
-			button18.Name = "button18";
-			button18.Size = new Size(75, 20);
-			button18.TabIndex = 48;
-			button18.Text = "-";
-			button18.TextAlign = ContentAlignment.TopCenter;
-			button18.UseVisualStyleBackColor = true;
+			button_yahtzee1.Location = new Point(634, 405);
+			button_yahtzee1.Name = "button_yahtzee1";
+			button_yahtzee1.Size = new Size(75, 20);
+			button_yahtzee1.TabIndex = 48;
+			button_yahtzee1.Text = "-";
+			button_yahtzee1.TextAlign = ContentAlignment.TopCenter;
+			button_yahtzee1.UseVisualStyleBackColor = true;
+			button_yahtzee1.Click += button_yahtzee1_Click;
 			// 
 			// label2
 			// 
 			label2.AutoSize = true;
-			label2.Location = new Point(649, 461);
+			label2.Location = new Point(653, 450);
 			label2.Name = "label2";
 			label2.Size = new Size(38, 15);
 			label2.TabIndex = 49;
@@ -520,141 +512,143 @@
 			// label24
 			// 
 			label24.AutoSize = true;
-			label24.Location = new Point(730, 461);
+			label24.Location = new Point(734, 450);
 			label24.Name = "label24";
 			label24.Size = new Size(44, 15);
 			label24.TabIndex = 66;
 			label24.Text = "label24";
 			// 
-			// button4
+			// button_yahtzee2
 			// 
-			button4.Location = new Point(715, 430);
-			button4.Name = "button4";
-			button4.Size = new Size(75, 20);
-			button4.TabIndex = 65;
-			button4.Text = "-";
-			button4.TextAlign = ContentAlignment.TopCenter;
-			button4.UseVisualStyleBackColor = true;
+			button_yahtzee2.Location = new Point(715, 405);
+			button_yahtzee2.Name = "button_yahtzee2";
+			button_yahtzee2.Size = new Size(75, 20);
+			button_yahtzee2.TabIndex = 65;
+			button_yahtzee2.Text = "-";
+			button_yahtzee2.TextAlign = ContentAlignment.TopCenter;
+			button_yahtzee2.UseVisualStyleBackColor = true;
+			button_yahtzee2.Click += button_yahtzee2_Click;
 			// 
-			// button5
+			// button_fullHouse2
 			// 
-			button5.Location = new Point(714, 300);
-			button5.Name = "button5";
-			button5.Size = new Size(75, 20);
-			button5.TabIndex = 64;
-			button5.Text = "-";
-			button5.TextAlign = ContentAlignment.TopCenter;
-			button5.UseVisualStyleBackColor = true;
+			button_fullHouse2.Location = new Point(714, 300);
+			button_fullHouse2.Name = "button_fullHouse2";
+			button_fullHouse2.Size = new Size(75, 20);
+			button_fullHouse2.TabIndex = 64;
+			button_fullHouse2.Text = "-";
+			button_fullHouse2.TextAlign = ContentAlignment.TopCenter;
+			button_fullHouse2.UseVisualStyleBackColor = true;
+			button_fullHouse2.Click += button_fullHouse2_Click;
 			// 
-			// button16
+			// button_smallStraight2
 			// 
-			button16.Location = new Point(714, 326);
-			button16.Name = "button16";
-			button16.Size = new Size(75, 20);
-			button16.TabIndex = 63;
-			button16.Text = "-";
-			button16.TextAlign = ContentAlignment.TopCenter;
-			button16.UseVisualStyleBackColor = true;
+			button_smallStraight2.Location = new Point(714, 326);
+			button_smallStraight2.Name = "button_smallStraight2";
+			button_smallStraight2.Size = new Size(75, 20);
+			button_smallStraight2.TabIndex = 63;
+			button_smallStraight2.Text = "-";
+			button_smallStraight2.TextAlign = ContentAlignment.TopCenter;
+			button_smallStraight2.UseVisualStyleBackColor = true;
+			button_smallStraight2.Click += button_smallStraight2_Click;
 			// 
-			// button17
+			// button_largeStraight2
 			// 
-			button17.Location = new Point(714, 352);
-			button17.Name = "button17";
-			button17.Size = new Size(75, 20);
-			button17.TabIndex = 62;
-			button17.Text = "-";
-			button17.TextAlign = ContentAlignment.TopCenter;
-			button17.UseVisualStyleBackColor = true;
+			button_largeStraight2.Location = new Point(714, 352);
+			button_largeStraight2.Name = "button_largeStraight2";
+			button_largeStraight2.Size = new Size(75, 20);
+			button_largeStraight2.TabIndex = 62;
+			button_largeStraight2.Text = "-";
+			button_largeStraight2.TextAlign = ContentAlignment.TopCenter;
+			button_largeStraight2.UseVisualStyleBackColor = true;
+			button_largeStraight2.Click += button_largeStraight2_Click;
 			// 
-			// button19
+			// button_chance2
 			// 
-			button19.Location = new Point(715, 378);
-			button19.Name = "button19";
-			button19.Size = new Size(75, 20);
-			button19.TabIndex = 61;
-			button19.Text = "-";
-			button19.TextAlign = ContentAlignment.TopCenter;
-			button19.UseVisualStyleBackColor = true;
+			button_chance2.Location = new Point(715, 378);
+			button_chance2.Name = "button_chance2";
+			button_chance2.Size = new Size(75, 20);
+			button_chance2.TabIndex = 61;
+			button_chance2.Text = "-";
+			button_chance2.TextAlign = ContentAlignment.TopCenter;
+			button_chance2.UseVisualStyleBackColor = true;
+			button_chance2.Click += button_chance2_Click;
 			// 
-			// button20
+			// button_deux2
 			// 
-			button20.Location = new Point(715, 404);
-			button20.Name = "button20";
-			button20.Size = new Size(75, 20);
-			button20.TabIndex = 60;
-			button20.Text = "-";
-			button20.TextAlign = ContentAlignment.TopCenter;
-			button20.UseVisualStyleBackColor = true;
+			button_deux2.Location = new Point(714, 71);
+			button_deux2.Name = "button_deux2";
+			button_deux2.Size = new Size(75, 20);
+			button_deux2.TabIndex = 59;
+			button_deux2.Text = "-";
+			button_deux2.TextAlign = ContentAlignment.TopCenter;
+			button_deux2.UseVisualStyleBackColor = true;
+			button_deux2.Click += button_deux2_Click;
 			// 
-			// button21
+			// button_trois2
 			// 
-			button21.Location = new Point(714, 71);
-			button21.Name = "button21";
-			button21.Size = new Size(75, 20);
-			button21.TabIndex = 59;
-			button21.Text = "-";
-			button21.TextAlign = ContentAlignment.TopCenter;
-			button21.UseVisualStyleBackColor = true;
+			button_trois2.Location = new Point(714, 92);
+			button_trois2.Name = "button_trois2";
+			button_trois2.Size = new Size(75, 20);
+			button_trois2.TabIndex = 58;
+			button_trois2.Text = "-";
+			button_trois2.TextAlign = ContentAlignment.TopCenter;
+			button_trois2.UseVisualStyleBackColor = true;
+			button_trois2.Click += button_trois2_Click;
 			// 
-			// button22
+			// button_quatres2
 			// 
-			button22.Location = new Point(714, 92);
-			button22.Name = "button22";
-			button22.Size = new Size(75, 20);
-			button22.TabIndex = 58;
-			button22.Text = "-";
-			button22.TextAlign = ContentAlignment.TopCenter;
-			button22.UseVisualStyleBackColor = true;
+			button_quatres2.Location = new Point(714, 115);
+			button_quatres2.Name = "button_quatres2";
+			button_quatres2.Size = new Size(75, 20);
+			button_quatres2.TabIndex = 57;
+			button_quatres2.Text = "-";
+			button_quatres2.TextAlign = ContentAlignment.TopCenter;
+			button_quatres2.UseVisualStyleBackColor = true;
+			button_quatres2.Click += button_quatres2_Click;
 			// 
-			// button23
+			// button_cinqs2
 			// 
-			button23.Location = new Point(714, 115);
-			button23.Name = "button23";
-			button23.Size = new Size(75, 20);
-			button23.TabIndex = 57;
-			button23.Text = "-";
-			button23.TextAlign = ContentAlignment.TopCenter;
-			button23.UseVisualStyleBackColor = true;
+			button_cinqs2.Location = new Point(715, 143);
+			button_cinqs2.Name = "button_cinqs2";
+			button_cinqs2.Size = new Size(75, 20);
+			button_cinqs2.TabIndex = 56;
+			button_cinqs2.Text = "-";
+			button_cinqs2.TextAlign = ContentAlignment.TopCenter;
+			button_cinqs2.UseVisualStyleBackColor = true;
+			button_cinqs2.Click += button_cinqs2_Click;
 			// 
-			// button24
+			// button_six2
 			// 
-			button24.Location = new Point(715, 143);
-			button24.Name = "button24";
-			button24.Size = new Size(75, 20);
-			button24.TabIndex = 56;
-			button24.Text = "-";
-			button24.TextAlign = ContentAlignment.TopCenter;
-			button24.UseVisualStyleBackColor = true;
+			button_six2.Location = new Point(714, 165);
+			button_six2.Name = "button_six2";
+			button_six2.Size = new Size(75, 20);
+			button_six2.TabIndex = 55;
+			button_six2.Text = "-";
+			button_six2.TextAlign = ContentAlignment.TopCenter;
+			button_six2.UseVisualStyleBackColor = true;
+			button_six2.Click += button_six2_Click;
 			// 
-			// button25
+			// button_threeOfAKind2
 			// 
-			button25.Location = new Point(714, 165);
-			button25.Name = "button25";
-			button25.Size = new Size(75, 20);
-			button25.TabIndex = 55;
-			button25.Text = "-";
-			button25.TextAlign = ContentAlignment.TopCenter;
-			button25.UseVisualStyleBackColor = true;
+			button_threeOfAKind2.Location = new Point(714, 247);
+			button_threeOfAKind2.Name = "button_threeOfAKind2";
+			button_threeOfAKind2.Size = new Size(75, 20);
+			button_threeOfAKind2.TabIndex = 54;
+			button_threeOfAKind2.Text = "-";
+			button_threeOfAKind2.TextAlign = ContentAlignment.TopCenter;
+			button_threeOfAKind2.UseVisualStyleBackColor = true;
+			button_threeOfAKind2.Click += button_threeOfAKind2_Click;
 			// 
-			// button26
+			// button_fourOfAKind2
 			// 
-			button26.Location = new Point(714, 247);
-			button26.Name = "button26";
-			button26.Size = new Size(75, 20);
-			button26.TabIndex = 54;
-			button26.Text = "-";
-			button26.TextAlign = ContentAlignment.TopCenter;
-			button26.UseVisualStyleBackColor = true;
-			// 
-			// button27
-			// 
-			button27.Location = new Point(714, 273);
-			button27.Name = "button27";
-			button27.Size = new Size(75, 20);
-			button27.TabIndex = 53;
-			button27.Text = "-";
-			button27.TextAlign = ContentAlignment.TopCenter;
-			button27.UseVisualStyleBackColor = true;
+			button_fourOfAKind2.Location = new Point(714, 273);
+			button_fourOfAKind2.Name = "button_fourOfAKind2";
+			button_fourOfAKind2.Size = new Size(75, 20);
+			button_fourOfAKind2.TabIndex = 53;
+			button_fourOfAKind2.Text = "-";
+			button_fourOfAKind2.TextAlign = ContentAlignment.TopCenter;
+			button_fourOfAKind2.UseVisualStyleBackColor = true;
+			button_fourOfAKind2.Click += button_fourOfAKind2_Click;
 			// 
 			// button_uns2
 			// 
@@ -665,6 +659,7 @@
 			button_uns2.Text = "-";
 			button_uns2.TextAlign = ContentAlignment.TopCenter;
 			button_uns2.UseVisualStyleBackColor = true;
+			button_uns2.Click += button_uns2_Click;
 			// 
 			// deMain2
 			// 
@@ -805,42 +800,39 @@
 			Controls.Add(label22);
 			Controls.Add(label23);
 			Controls.Add(label24);
-			Controls.Add(button4);
-			Controls.Add(button5);
-			Controls.Add(button16);
-			Controls.Add(button17);
-			Controls.Add(button19);
-			Controls.Add(button20);
-			Controls.Add(button21);
-			Controls.Add(button22);
-			Controls.Add(button23);
-			Controls.Add(button24);
-			Controls.Add(button25);
-			Controls.Add(button26);
-			Controls.Add(button27);
+			Controls.Add(button_yahtzee2);
+			Controls.Add(button_fullHouse2);
+			Controls.Add(button_smallStraight2);
+			Controls.Add(button_largeStraight2);
+			Controls.Add(button_chance2);
+			Controls.Add(button_deux2);
+			Controls.Add(button_trois2);
+			Controls.Add(button_quatres2);
+			Controls.Add(button_cinqs2);
+			Controls.Add(button_six2);
+			Controls.Add(button_threeOfAKind2);
+			Controls.Add(button_fourOfAKind2);
 			Controls.Add(button_uns2);
 			Controls.Add(label21);
 			Controls.Add(label3);
 			Controls.Add(label2);
-			Controls.Add(button18);
-			Controls.Add(button15);
-			Controls.Add(button14);
-			Controls.Add(button13);
-			Controls.Add(button12);
-			Controls.Add(button11);
-			Controls.Add(button10);
-			Controls.Add(button9);
-			Controls.Add(button8);
-			Controls.Add(button7);
-			Controls.Add(button6);
-			Controls.Add(button3);
-			Controls.Add(button2);
+			Controls.Add(button_yahtzee1);
+			Controls.Add(button_fullHouse1);
+			Controls.Add(button_smallStraight1);
+			Controls.Add(button_largeStraight1);
+			Controls.Add(button_chance1);
+			Controls.Add(button_deux1);
+			Controls.Add(button_trois1);
+			Controls.Add(button_quatres1);
+			Controls.Add(button_cinqs1);
+			Controls.Add(button_six1);
+			Controls.Add(button_threeOfAKind1);
+			Controls.Add(button_fourOfAKind1);
 			Controls.Add(button_uns1);
 			Controls.Add(panel_colj2);
 			Controls.Add(panel_colj1);
 			Controls.Add(label20);
 			Controls.Add(label19);
-			Controls.Add(label18);
 			Controls.Add(label17);
 			Controls.Add(label16);
 			Controls.Add(label15);
@@ -898,44 +890,41 @@
 		private Label label15;
 		private Label label16;
 		private Label label17;
-		private Label label18;
 		private Label label19;
 		private Label label20;
 		private Panel panel_colj1;
 		private Panel panel_colj2;
 		private Button button_uns1;
-		private Button button2;
-		private Button button3;
-		private Button button6;
-		private Button button7;
-		private Button button8;
-		private Button button9;
-		private Button button10;
-		private Button button11;
-		private Button button12;
-		private Button button13;
-		private Button button14;
-		private Button button15;
-		private Button button18;
+		private Button button_fourOfAKind1;
+		private Button button_threeOfAKind1;
+		private Button button_six1;
+		private Button button_cinqs1;
+		private Button button_quatres1;
+		private Button button_trois1;
+		private Button button_deux1;
+		private Button button_chance1;
+		private Button button_largeStraight1;
+		private Button button_smallStraight1;
+		private Button button_fullHouse1;
+		private Button button_yahtzee1;
 		private Label label2;
 		private Label label3;
 		private Label label21;
 		private Label label22;
 		private Label label23;
 		private Label label24;
-		private Button button4;
-		private Button button5;
-		private Button button16;
-		private Button button17;
-		private Button button19;
-		private Button button20;
-		private Button button21;
-		private Button button22;
-		private Button button23;
-		private Button button24;
-		private Button button25;
-		private Button button26;
-		private Button button27;
+		private Button button_yahtzee2;
+		private Button button_fullHouse2;
+		private Button button_smallStraight2;
+		private Button button_largeStraight2;
+		private Button button_chance2;
+		private Button button_deux2;
+		private Button button_trois2;
+		private Button button_quatres2;
+		private Button button_cinqs2;
+		private Button button_six2;
+		private Button button_threeOfAKind2;
+		private Button button_fourOfAKind2;
 		private Button button_uns2;
         private PictureBox deMain2;
         private PictureBox deMain4;

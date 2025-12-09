@@ -8,7 +8,7 @@ namespace TP_3
 {
     internal class CalculateurScore
     {
-        public static int Uns(int[] des)
+        public static int Uns(List<int> des)
         {
             int score = 0;
             foreach (int de in des)
@@ -18,7 +18,7 @@ namespace TP_3
             return score;
         }
 
-        public static int Deux(int[] des)
+        public static int Deux(List<int> des)
         {
             int score = 0;
             foreach (int de in des)
@@ -28,7 +28,7 @@ namespace TP_3
             return score;
         }
 
-        public static int Trois(int[] des)
+        public static int Trois(List<int> des)
         {
             int score = 0;
             foreach (int de in des)
@@ -38,7 +38,7 @@ namespace TP_3
             return score;
         }
 
-        public static int Quatres(int[] des)
+        public static int Quatres(List<int> des)
         {
             int score = 0;
             foreach (int de in des)
@@ -48,7 +48,7 @@ namespace TP_3
             return score;
         }
 
-        public static int Cinqs(int[] des)
+        public static int Cinqs(List<int> des)
         {
             int score = 0;
             foreach (int de in des)
@@ -58,7 +58,7 @@ namespace TP_3
             return score;
         }
 
-        public static int Six(int[] des)
+        public static int Six(List<int> des)
         {
             int score = 0;
             foreach (int de in des)
@@ -68,7 +68,7 @@ namespace TP_3
             return score;
         }
 
-        public static int ThreeOfAKind(int[] des)
+        public static int ThreeOfAKind(List<int> des)
         {
             int somme = 0;
             foreach (int de in des)
@@ -90,7 +90,7 @@ namespace TP_3
             return 0;
         }
 
-        public static int FourOfAKind(int[] des)
+        public static int FourOfAKind(List<int> des)
         {
             int somme = 0;
             foreach (int de in des)
@@ -112,7 +112,7 @@ namespace TP_3
             return 0;
         }
 
-        public static int FullHouse(int[] des)
+        public static int FullHouse(List<int> des)
         {
             Dictionary<int, int> frequences = new Dictionary<int, int>();
             foreach (int de in des)
@@ -132,7 +132,7 @@ namespace TP_3
             new List<int>() {2, 3, 4, 5},
             new List<int>() {3, 4, 5, 6}
         };
-        public static int SmallStraight(int[] des)
+        public static int SmallStraight(List<int> des)
         {
             Dictionary<int, bool> valeursUniques = new Dictionary<int, bool>();
             foreach (int de in des)
@@ -163,7 +163,7 @@ namespace TP_3
             new List<int>() {1, 2, 3, 4, 5},
             new List<int>() {2, 3, 4, 5, 6}
         };
-        public static int LargeStraight(int[] des)
+        public static int LargeStraight(List<int> des)
         {
             Dictionary<int, bool> valeursUniques = new Dictionary<int, bool>();
             foreach (int de in des)
@@ -188,17 +188,17 @@ namespace TP_3
             return 0;
         }
 
-        public static int Yahtzee(int[] des)
+        public static int Yahtzee(List<int> des)
         {
             int dernierDe = des[0];
-			for (int i = 1; i < des.Length; i++)
+			for (int i = 1; i < des.Count; i++)
 			{
 				if (des[i] != dernierDe) return 0;
 			}
 			return 50;
         }
 
-        public static int Chance(int[] des)
+        public static int Chance(List<int> des)
         {
             int somme = 0;
             foreach (int de in des)
