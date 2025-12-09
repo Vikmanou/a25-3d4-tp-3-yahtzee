@@ -34,6 +34,14 @@ namespace TP_3
 				throw new Exception("Aucun lance restant pour ce tour.");
 			}
 
+			if (_lancesRestants == NOMBRE_DE_LANCES_PAR_TOUR)
+			{
+				for (int i = 0; i < _desDansMain.Count; i++)
+				{
+					_desDansMain[i] = false;
+				}
+			}
+
 			Random rand = new Random();
 			for (int i = 0; i < _des.Count; i++)
 			{
@@ -44,6 +52,16 @@ namespace TP_3
 			}
 
 			_lancesRestants--;
+		}
+
+		public void PrendreDeEnMain(int indexDe)
+		{
+			_desDansMain[indexDe] = true;
+		}
+
+		public void RelacherDe(int indexDe)
+		{
+			_desDansMain[indexDe] = false;
 		}
 
 		public void ProchainTour()
@@ -63,7 +81,13 @@ namespace TP_3
 			get { return _desDansMain; }
         }
 
-        public int LancesRestants
+		public int TourJoueur 
+		{
+			get { return _tourJoueur; }
+		}
+
+
+		public int LancesRestants
 		{
 			get { return _lancesRestants; }
 		}

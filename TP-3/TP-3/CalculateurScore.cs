@@ -190,16 +190,12 @@ namespace TP_3
 
         public static int Yahtzee(int[] des)
         {
-            Dictionary<int, int> frequences = new Dictionary<int, int>();
-            foreach (int de in des)
-            {
-                frequences[de] = frequences.ContainsKey(de) ? frequences[de] + 1 : 1;
-                if (frequences[de] == 5)
-                {
-                    return 50;
-                }
-            }
-            return 0;
+            int dernierDe = des[0];
+			for (int i = 1; i < des.Length; i++)
+			{
+				if (des[i] != dernierDe) return 0;
+			}
+			return 50;
         }
 
         public static int Chance(int[] des)
