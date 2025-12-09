@@ -13,7 +13,7 @@ namespace TP_3
 		private int _nombreJoueurs;
 
 		private List<int> _des;
-		private List<bool> _desGardees;
+		private List<bool> _desDansMain;
 
 		private List<Joueur> _joueurs;
 		private int _tourJoueur = 0;
@@ -24,7 +24,7 @@ namespace TP_3
 			_joueurs = joueurs;
 			_nombreJoueurs = joueurs.Count;
 			_des = new List<int> { 0, 0, 0, 0, 0 };
-			_desGardees = new List<bool> { false, false, false, false, false };
+            _desDansMain = new List<bool> { true, true, true, true, true };
 		}
 
 		public void LancerDes()
@@ -37,7 +37,7 @@ namespace TP_3
 			Random rand = new Random();
 			for (int i = 0; i < _des.Count; i++)
 			{
-				if (!_desGardees[i])
+				if (!_desDansMain[i])
 				{
 					_des[i] = rand.Next(1, 7);
 				}
@@ -49,7 +49,7 @@ namespace TP_3
 		public void ProchainTour()
 		{
 			_tourJoueur = (_tourJoueur + 1) % _nombreJoueurs;
-			_desGardees = new List<bool> { false, false, false, false, false };
+            _desDansMain = new List<bool> { true, true, true, true, true };
 			_lancesRestants = NOMBRE_DE_LANCES_PAR_TOUR;
 		}
 
@@ -58,7 +58,12 @@ namespace TP_3
 			get { return _des; }
 		}
 
-		public int LancesRestants
+		public List<bool> DesDansMain
+		{
+			get { return _desDansMain; }
+        }
+
+        public int LancesRestants
 		{
 			get { return _lancesRestants; }
 		}
