@@ -54,7 +54,7 @@
             label20 = new Label();
             panel_colj1 = new Panel();
             panel_colj2 = new Panel();
-            button1 = new Button();
+            button_uns1 = new Button();
             button2 = new Button();
             button3 = new Button();
             button6 = new Button();
@@ -87,7 +87,7 @@
             button25 = new Button();
             button26 = new Button();
             button27 = new Button();
-            button28 = new Button();
+            button_uns2 = new Button();
             deMain2 = new PictureBox();
             deMain4 = new PictureBox();
             deMain3 = new PictureBox();
@@ -331,15 +331,15 @@
             panel_colj2.Size = new Size(18, 18);
             panel_colj2.TabIndex = 30;
             // 
-            // button1
+            // button_uns1
             // 
-            button1.Location = new Point(633, 47);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 20);
-            button1.TabIndex = 31;
-            button1.Text = "-";
-            button1.TextAlign = ContentAlignment.TopCenter;
-            button1.UseVisualStyleBackColor = true;
+            button_uns1.Location = new Point(633, 47);
+            button_uns1.Name = "button_uns1";
+            button_uns1.Size = new Size(75, 20);
+            button_uns1.TabIndex = 31;
+            button_uns1.Text = "-";
+            button_uns1.TextAlign = ContentAlignment.TopCenter;
+            button_uns1.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
@@ -655,15 +655,15 @@
             button27.TextAlign = ContentAlignment.TopCenter;
             button27.UseVisualStyleBackColor = true;
             // 
-            // button28
+            // button_uns2
             // 
-            button28.Location = new Point(714, 47);
-            button28.Name = "button28";
-            button28.Size = new Size(75, 20);
-            button28.TabIndex = 52;
-            button28.Text = "-";
-            button28.TextAlign = ContentAlignment.TopCenter;
-            button28.UseVisualStyleBackColor = true;
+            button_uns2.Location = new Point(714, 47);
+            button_uns2.Name = "button_uns2";
+            button_uns2.Size = new Size(75, 20);
+            button_uns2.TabIndex = 52;
+            button_uns2.Text = "-";
+            button_uns2.TextAlign = ContentAlignment.TopCenter;
+            button_uns2.UseVisualStyleBackColor = true;
             // 
             // deMain2
             // 
@@ -808,7 +808,7 @@
             Controls.Add(button25);
             Controls.Add(button26);
             Controls.Add(button27);
-            Controls.Add(button28);
+            Controls.Add(button_uns2);
             Controls.Add(label21);
             Controls.Add(label3);
             Controls.Add(label2);
@@ -825,7 +825,7 @@
             Controls.Add(button6);
             Controls.Add(button3);
             Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(button_uns1);
             Controls.Add(panel_colj2);
             Controls.Add(panel_colj1);
             Controls.Add(label20);
@@ -893,7 +893,7 @@
 		private Label label20;
 		private Panel panel_colj1;
 		private Panel panel_colj2;
-		private Button button1;
+		private Button button_uns1;
 		private Button button2;
 		private Button button3;
 		private Button button6;
@@ -926,7 +926,7 @@
 		private Button button25;
 		private Button button26;
 		private Button button27;
-		private Button button28;
+		private Button button_uns2;
         private PictureBox deMain2;
         private PictureBox deMain4;
         private PictureBox deMain3;
