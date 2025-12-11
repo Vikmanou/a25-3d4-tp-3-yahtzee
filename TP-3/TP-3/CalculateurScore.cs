@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TP_3
 {
-    internal class CalculateurScore
+    public class CalculateurScore
     {
         public static int Uns(List<int> des)
         {
