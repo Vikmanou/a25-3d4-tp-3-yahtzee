@@ -15,7 +15,7 @@ namespace TP_3
 	{
 		List<Joueur> joueurs = new List<Joueur>();
 		List<Color> couleurs = new List<Color> { Color.Red, Color.Blue, Color.Green, Color.Yellow, Color.Orange, Color.Black };
-		List<Color> couleursDes = new List<Color> { Color.Black, Color.White, Color.Blue, Color.Yellow, Color.Red, Color.Green };
+		List<Color> couleursDes = new List<Color> { Color.Black, Color.Blue, Color.Yellow, Color.Red, Color.Green };
 
 		private bool modifieJoueur = false;
 

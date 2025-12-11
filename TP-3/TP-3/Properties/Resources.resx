@@ -142,19 +142,70 @@
   <data name="DeBlue_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Bleu_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="DeBlue_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Bleu_3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="DeBlue_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Bleu_4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="DeBlue_5" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Bleu_5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="DeBlue_6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Bleu_6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="DeGreen_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Vert_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DeGreen_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Vert_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DeGreen_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Vert_3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DeGreen_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Vert_4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DeGreen_5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Vert_5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DeGreen_6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Vert_6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="DeRed_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Rouge_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="DeRed_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Rouge_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DeRed_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Rouge_3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DeRed_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Rouge_4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DeRed_5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Rouge_5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DeRed_6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Rouge_6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="DeYellow_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Jaune_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DeYellow_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Jaune_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DeYellow_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Jaune_3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DeYellow_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Jaune_4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DeYellow_5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Jaune_5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DeYellow_6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Jaune_6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -21,6 +21,14 @@ namespace TP_3
 			Form2 form2 = new Form2(joueurs);
 			form2.ShowDialog();
 
+			foreach (Joueur joueur in checkedListBox_joueurs.Items)
+			{
+				if (!joueurs.Contains(joueur))
+				{
+					checkedListBox_joueurs.Items.Remove(joueur);
+                }
+            }
+
 			foreach (Joueur joueur in joueurs)
 			{
 				if (!checkedListBox_joueurs.Items.Contains(joueur))

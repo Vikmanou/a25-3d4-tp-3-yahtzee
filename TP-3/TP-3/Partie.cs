@@ -19,7 +19,9 @@ namespace TP_3
 		private int _tourJoueur = 0;
 		private int _lancesRestants = NOMBRE_DE_LANCES_PAR_TOUR;
 
-		public Partie(List<Joueur> joueurs)
+        Random rand = new Random();
+
+        public Partie(List<Joueur> joueurs)
 		{
 			_joueurs = joueurs;
 			_nombreJoueurs = joueurs.Count;
@@ -42,17 +44,21 @@ namespace TP_3
 				}
 			}
 
-			Random rand = new Random();
-			for (int i = 0; i < _des.Count; i++)
-			{
-				if (!_desDansMain[i])
-				{
-					_des[i] = rand.Next(1, 7);
-				}
-			}
+			MelangerDes();
 
-			_lancesRestants--;
+            _lancesRestants--;
 		}
+
+		public void MelangerDes()
+		{
+            for (int i = 0; i < _des.Count; i++)
+            {
+                if (!_desDansMain[i])
+                {
+                    _des[i] = rand.Next(1, 7);
+                }
+            }
+        }
 
 		public void PrendreDeEnMain(int indexDe)
 		{
@@ -91,5 +97,10 @@ namespace TP_3
 		{
 			get { return _lancesRestants; }
 		}
-	}
+
+		public int LancesParTour
+		{
+			get { return NOMBRE_DE_LANCES_PAR_TOUR; }
+        }
+    }
 }
