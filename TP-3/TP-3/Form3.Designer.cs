@@ -763,10 +763,10 @@
             // label_tour
             // 
             label_tour.AutoSize = true;
-            label_tour.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label_tour.Location = new Point(177, 46);
+            label_tour.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label_tour.Location = new Point(168, 39);
             label_tour.Name = "label_tour";
-            label_tour.Size = new Size(103, 21);
+            label_tour.Size = new Size(137, 30);
             label_tour.TabIndex = 78;
             label_tour.Text = "Tour: Joueur1";
             // 
