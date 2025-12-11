@@ -31,15 +31,11 @@ namespace TP_3
 			_totalPointsDesParties = 0;
 		}
 
-		public void AjouterPoints(int points)
+		public void PartieTerminee(int points)
 		{
-			_points += points;
-			_totalPointsDesParties += points;
-		}
-
-		public void PartieTerminee()
-		{
-			_partiesJouees++;
+            _points += points;
+            _totalPointsDesParties += points;
+            _partiesJouees++;
 			_points = 0;
 		}
 

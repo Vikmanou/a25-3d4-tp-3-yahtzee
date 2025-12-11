@@ -260,9 +260,35 @@ namespace TP_3
                 int score = calculerScore(partie.Des);
 
                 bouton.Text = score.ToString();
+                calculerTotalEtAfficher();
+
+                if (partie.EstPartieTerminee())
+                {
+                    string messageFinPartie;
+                    int totalJoueur1 = int.Parse(label_total1.Text);
+                    int totalJoueur2 = int.Parse(label_total2.Text);
+
+                    partie.PartieTerminee(totalJoueur1, totalJoueur2);
+
+                    if (totalJoueur1 > totalJoueur2)
+                    {
+                        messageFinPartie = $"Le gagnant est {joueurs[0].Identifiant} avec {totalJoueur1} points.";
+                    }
+                    else if (totalJoueur2 > totalJoueur1)
+                    {
+                        messageFinPartie = $"Le gagnant est {joueurs[1].Identifiant} avec {totalJoueur2} points.";
+                    }
+                    else
+                    {
+                        messageFinPartie = "La partie est égale.";
+                    }
+                    MessageBox.Show(messageFinPartie);
+                    this.Close();
+                    return;
+                }
+
                 partie.ProchainTour();
                 mettreAJourDes();
-                calculerTotalEtAfficher();
 
                 button_lancer.Enabled = true;
             }
