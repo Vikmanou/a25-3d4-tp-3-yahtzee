@@ -178,6 +178,68 @@ namespace TP_3
             mettreAJourDes();
         }
 
+        private void calculerTotalEtAfficher()
+        {
+            int sommeNombresJoueur1 = 0;
+            int sommeNombresJoueur2 = 0;
+
+            foreach (Button bouton in new List<Button>() { button_uns1, button_deux1, button_trois1, button_quatres1, button_cinqs1, button_six1 })
+            {
+                if (int.TryParse(bouton.Text, out int score))
+                {
+                    sommeNombresJoueur1 += score;
+                }
+            }
+
+            foreach (Button bouton in new List<Button>() { button_uns2, button_deux2, button_trois2, button_quatres2, button_cinqs2, button_six2 })
+            {
+                if (int.TryParse(bouton.Text, out int score))
+                {
+                    sommeNombresJoueur2 += score;
+                }
+            }
+
+            label_somme1.Text = sommeNombresJoueur1.ToString();
+            label_somme2.Text = sommeNombresJoueur2.ToString();
+
+            label_bonus1.Text = (sommeNombresJoueur1 >= 63) ? "35" : "0";
+            label_bonus2.Text = (sommeNombresJoueur2 >= 63) ? "35" : "0";
+
+            List<Button> boutonsJoueur1 = new List<Button>()
+            {
+                button_threeOfAKind1, button_fourOfAKind1, button_fullHouse1, button_smallStraight1,
+                button_largeStraight1, button_chance1, button_yahtzee1
+            };
+
+            List<Button> boutonsJoueur2 = new List<Button>()
+            {
+                button_threeOfAKind2, button_fourOfAKind2, button_fullHouse2, button_smallStraight2,
+                button_largeStraight2, button_chance2, button_yahtzee2
+            };
+
+            int totalJoueur1 = sommeNombresJoueur1 + ((sommeNombresJoueur1 >= 63) ? 35 : 0);
+            int totalJoueur2 = sommeNombresJoueur2 + ((sommeNombresJoueur2 >= 63) ? 35 : 0);
+
+            foreach (Button bouton in boutonsJoueur1)
+            {
+                if (int.TryParse(bouton.Text, out int score))
+                {
+                    totalJoueur1 += score;
+                }
+            }
+
+            foreach (Button bouton in boutonsJoueur2)
+            {
+                if (int.TryParse(bouton.Text, out int score))
+                {
+                    totalJoueur2 += score;
+                }
+            }
+
+            label_total1.Text = totalJoueur1.ToString();
+            label_total2.Text = totalJoueur2.ToString();
+        }
+
         private void afficherScoreEtPasserAuProchainTour(Button bouton, Func<List<int>, int> calculerScore)
         {
             if (melangerDes)
@@ -200,6 +262,7 @@ namespace TP_3
                 bouton.Text = score.ToString();
                 partie.ProchainTour();
                 mettreAJourDes();
+                calculerTotalEtAfficher();
 
                 button_lancer.Enabled = true;
             }

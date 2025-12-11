@@ -66,12 +66,12 @@
             button_smallStraight1 = new Button();
             button_fullHouse1 = new Button();
             button_yahtzee1 = new Button();
-            label2 = new Label();
-            label3 = new Label();
-            label21 = new Label();
-            label22 = new Label();
-            label23 = new Label();
-            label24 = new Label();
+            label_total1 = new Label();
+            label_bonus1 = new Label();
+            label_somme1 = new Label();
+            label_somme2 = new Label();
+            label_bonus2 = new Label();
+            label_total2 = new Label();
             button_yahtzee2 = new Button();
             button_fullHouse2 = new Button();
             button_smallStraight2 = new Button();
@@ -464,59 +464,59 @@
             button_yahtzee1.UseVisualStyleBackColor = true;
             button_yahtzee1.Click += button_yahtzee1_Click;
             // 
-            // label2
+            // label_total1
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(653, 450);
-            label2.Name = "label2";
-            label2.Size = new Size(38, 15);
-            label2.TabIndex = 49;
-            label2.Text = "label2";
+            label_total1.AutoSize = true;
+            label_total1.Location = new Point(653, 450);
+            label_total1.Name = "label_total1";
+            label_total1.Size = new Size(38, 15);
+            label_total1.TabIndex = 49;
+            label_total1.Text = "label2";
             // 
-            // label3
+            // label_bonus1
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(647, 222);
-            label3.Name = "label3";
-            label3.Size = new Size(38, 15);
-            label3.TabIndex = 50;
-            label3.Text = "label3";
+            label_bonus1.AutoSize = true;
+            label_bonus1.Location = new Point(647, 222);
+            label_bonus1.Name = "label_bonus1";
+            label_bonus1.Size = new Size(38, 15);
+            label_bonus1.TabIndex = 50;
+            label_bonus1.Text = "label3";
             // 
-            // label21
+            // label_somme1
             // 
-            label21.AutoSize = true;
-            label21.Location = new Point(645, 198);
-            label21.Name = "label21";
-            label21.Size = new Size(44, 15);
-            label21.TabIndex = 51;
-            label21.Text = "label21";
+            label_somme1.AutoSize = true;
+            label_somme1.Location = new Point(645, 198);
+            label_somme1.Name = "label_somme1";
+            label_somme1.Size = new Size(44, 15);
+            label_somme1.TabIndex = 51;
+            label_somme1.Text = "label21";
             // 
-            // label22
+            // label_somme2
             // 
-            label22.AutoSize = true;
-            label22.Location = new Point(726, 198);
-            label22.Name = "label22";
-            label22.Size = new Size(44, 15);
-            label22.TabIndex = 68;
-            label22.Text = "label22";
+            label_somme2.AutoSize = true;
+            label_somme2.Location = new Point(726, 198);
+            label_somme2.Name = "label_somme2";
+            label_somme2.Size = new Size(44, 15);
+            label_somme2.TabIndex = 68;
+            label_somme2.Text = "label22";
             // 
-            // label23
+            // label_bonus2
             // 
-            label23.AutoSize = true;
-            label23.Location = new Point(728, 222);
-            label23.Name = "label23";
-            label23.Size = new Size(44, 15);
-            label23.TabIndex = 67;
-            label23.Text = "label23";
+            label_bonus2.AutoSize = true;
+            label_bonus2.Location = new Point(728, 222);
+            label_bonus2.Name = "label_bonus2";
+            label_bonus2.Size = new Size(44, 15);
+            label_bonus2.TabIndex = 67;
+            label_bonus2.Text = "label23";
             // 
-            // label24
+            // label_total2
             // 
-            label24.AutoSize = true;
-            label24.Location = new Point(734, 450);
-            label24.Name = "label24";
-            label24.Size = new Size(44, 15);
-            label24.TabIndex = 66;
-            label24.Text = "label24";
+            label_total2.AutoSize = true;
+            label_total2.Location = new Point(734, 450);
+            label_total2.Name = "label_total2";
+            label_total2.Size = new Size(44, 15);
+            label_total2.TabIndex = 66;
+            label_total2.Text = "label24";
             // 
             // button_yahtzee2
             // 
@@ -797,9 +797,9 @@
             Controls.Add(deMain4);
             Controls.Add(deMain3);
             Controls.Add(deMain2);
-            Controls.Add(label22);
-            Controls.Add(label23);
-            Controls.Add(label24);
+            Controls.Add(label_somme2);
+            Controls.Add(label_bonus2);
+            Controls.Add(label_total2);
             Controls.Add(button_yahtzee2);
             Controls.Add(button_fullHouse2);
             Controls.Add(button_smallStraight2);
@@ -813,9 +813,9 @@
             Controls.Add(button_threeOfAKind2);
             Controls.Add(button_fourOfAKind2);
             Controls.Add(button_uns2);
-            Controls.Add(label21);
-            Controls.Add(label3);
-            Controls.Add(label2);
+            Controls.Add(label_somme1);
+            Controls.Add(label_bonus1);
+            Controls.Add(label_total1);
             Controls.Add(button_yahtzee1);
             Controls.Add(button_fullHouse1);
             Controls.Add(button_smallStraight1);
@@ -907,12 +907,12 @@
 		private Button button_smallStraight1;
 		private Button button_fullHouse1;
 		private Button button_yahtzee1;
-		private Label label2;
-		private Label label3;
-		private Label label21;
-		private Label label22;
-		private Label label23;
-		private Label label24;
+		private Label label_total1;
+		private Label label_bonus1;
+		private Label label_somme1;
+		private Label label_somme2;
+		private Label label_bonus2;
+		private Label label_total2;
 		private Button button_yahtzee2;
 		private Button button_fullHouse2;
 		private Button button_smallStraight2;
